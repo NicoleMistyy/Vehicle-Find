@@ -23,6 +23,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"       
     />
+				<TextView  id="@+id/brand" layout_width="100dp" FontSize="20" Text="Brand :"/>
        
 				<Button Text="Enquire"
                 VerticalOptions="CenterAndExpand"
