@@ -36,6 +36,28 @@ namespace VehicleFind.Services
                 {
                     await db.Database.MigrateAsync(); //We need to ensure the latest Migration was added. This is different than EnsureDatabaseCreated.
 
+                    //Read scafolded users
+                    var checkUser = db.User.Where(u => u.FirstName == "User1").FirstOrDefault();
+                    var checkUser1 = db.User.Where(u => u.FirstName == "User2").FirstOrDefault();
+                    var checkUser2 = db.User.Where(u => u.FirstName == "User3").FirstOrDefault();
+
+                    //Remove scafolded users to avoid duplicated DELETE
+                    if (checkUser != null)
+                    {
+                        db.User.Remove(checkUser);
+                    }
+
+                    if (checkUser1 != null)
+                    {
+                        db.User.Remove(checkUser1);
+                    }
+
+                    if (checkUser2 != null)
+                    {
+                        db.User.Remove(checkUser2);
+                    }
+
+                    //Created new scafolded users
                     Users user1 = new Users()
                     {
                         FirstName = "User1",
