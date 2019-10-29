@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_top">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_margin="30dp">
+		<EditText
+            android:id="@+id/txtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:theme="@style/EditTextWhite"
+            android:inputType="text"/>
+		<EditText
+            android:id="@+id/txtSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Surname"
+            android:theme="@style/EditTextWhite"
+            android:inputType="text"/>
+		<EditText
+            android:id="@+id/txtCellNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cell Number"
+            android:theme="@style/EditTextWhite"
+            android:inputType="text"/>
+		<EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:theme="@style/EditTextWhite"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:theme="@style/EditTextWhite"
+            android:inputType="textPassword"/>
+
+		<EditText
+            android:id="@+id/txtConfirmPassword"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:theme="@style/EditTextWhite"
+            android:inputType="textPassword"/>
+      </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_bottom">     
+      <android.support.design.widget.FloatingActionButton
+          android:id="@+id/btnRegister"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="top"
+          android:layout_marginStart="10dp"
+          app:backgroundTint="#003157"
+          app:srcCompat="@drawable/ic_right_arrow" />
+    </FrameLayout>
+  </LinearLayout>
+</RelativeLayout>
