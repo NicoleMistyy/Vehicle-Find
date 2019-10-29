@@ -29,7 +29,7 @@ namespace VehicleFind
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.activity_main);
+
 
             Name = new List<String>();
             ID = new List<String>();
@@ -60,6 +60,15 @@ namespace VehicleFind
             catch (Exception ex)
             {
             }
+
+            try
+            {
+                SetContentView(Resource.Layout.activity_main);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 
@@ -77,14 +86,14 @@ namespace VehicleFind
                     var model = db.Models.Where(m => m.Id == position).FirstOrDefault();
                     var specificationsList = db.Specifications.Where(s => s.ModelId == model.Id);
 
-                    TextView textView = FindViewById<TextView>(Resource.Id.brand);
-                    textView.Text += "Brand: " + model.Name + System.Environment.NewLine;
-                    textView.Text += "Range: " + model.Name + System.Environment.NewLine;
+                    //TextView textView = FindViewById<TextView>(Resource.Id.brand);
+                    //textView.Text += "Brand: " + model.Name + System.Environment.NewLine;
+                    //textView.Text += "Range: " + model.Name + System.Environment.NewLine;
 
-                    foreach (var spec in specificationsList)
-                    {
-                        textView.Text += $"{spec.Name}: {spec.Value}" + System.Environment.NewLine;
-                    }
+                    //foreach (var spec in specificationsList)
+                    //{
+                    //    textView.Text += $"{spec.Name}: {spec.Value}" + System.Environment.NewLine;
+                    //}
                 }
 
 

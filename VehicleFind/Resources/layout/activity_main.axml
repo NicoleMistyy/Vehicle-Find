@@ -18,28 +18,26 @@
           android:layout_height="wrap_content"
           android:orientation="vertical"
           android:layout_margin="30dp">
-
-				<Spinner
-                            textAppearance="?android:attr/textAppearanceSmall"
-                            layout_width="wrap_content"
-                            layout_height="wrap_content"
-                             
-                             id="@+id/spinner"
-                             background="@android:drawable/btn_dropdown"
-                             layout_alignParentLeft="true"
-                             layout_alignParentRight="true"
-                             layout_marginLeft="10dp"
-                             layout_marginRight="10dp" />
-
-				<TextView  id="@+id/brand" FontSize="20" Text="Brand :"/>
-				
+<Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"       
+    />
+       
 				<Button Text="Enquire"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="SendEnquiry" />				
-                 />
+                Clicked="SendEnquiry" 
+				android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />	
 
       </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_bottom">     
+     
     </FrameLayout>
   </LinearLayout>
 </RelativeLayout>

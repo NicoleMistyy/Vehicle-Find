@@ -26,6 +26,7 @@ namespace VehicleFind.Services
     {
         public static async Task<bool> CreateDatabase()
         {
+            //Database location
             var dbFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             var fileName = "VehicleFind.db";
             var dbFullPath = Path.Combine(dbFolder, fileName);

@@ -10,4 +10,10 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Migrations\20191008193631_initialcreate.Designer.cs">
+      <DependentUpon>20191008193631_initialcreate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
