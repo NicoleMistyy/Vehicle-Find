@@ -18,30 +18,41 @@
           android:layout_height="wrap_content"
           android:orientation="vertical"
           android:layout_margin="30dp">
-        <EditText
-            android:id="@+id/txtEmail"
+		<EditText
+            android:id="@+id/txtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="Model Name"
             android:theme="@style/EditTextWhite"
-            android:inputType="textEmailAddress"
-            android:drawableLeft="@drawable/ic_lock" />
-        <EditText
-            android:id="@+id/txtPassword"
-            android:layout_marginTop="40dp"
+            android:inputType="text"/>
+		<EditText
+            android:id="@+id/txtRange"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="Range"
             android:theme="@style/EditTextWhite"
-            android:inputType="textPassword"
-            android:drawableLeft="@drawable/ic_key" />
-
-				<Button Text="Go To Register"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Clicked="OpenRegister" 
-				android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />	
+            android:inputType="text"/>
+		<EditText
+            android:id="@+id/txtZeroToOneHundred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="0-100"
+            android:theme="@style/EditTextWhite"
+            android:inputType="text"/>
+		<EditText
+            android:id="@+id/txtPower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Power"
+            android:theme="@style/EditTextWhite"
+            android:inputType="text"/>
+        <EditText
+            android:id="@+id/txtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:theme="@style/EditTextWhite"
+            android:inputType="textPassword"/>		
       </LinearLayout>
     </FrameLayout>
     <FrameLayout
@@ -49,11 +60,11 @@
         android:layout_height="wrap_content"
         android:background="@drawable/login_bottom">     
       <android.support.design.widget.FloatingActionButton
-          android:id="@+id/btnLogin"
+          android:id="@+id/btnRegister"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="top"
-          android:layout_marginStart="40dp"
+          android:layout_marginStart="10dp"
           app:backgroundTint="#003157"
           app:srcCompat="@drawable/ic_right_arrow" />
     </FrameLayout>

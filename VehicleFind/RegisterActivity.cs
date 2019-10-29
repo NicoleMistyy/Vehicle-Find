@@ -51,15 +51,39 @@ namespace VehicleFind
 }
 
         public void DoRegister(object sender, EventArgs e)
-        {                      
-            if (LoginService.LoginCheck(email.Text, password.Text))
+        {
+            if (password.Text != confirmPassword.Text)
             {
-                Toast.MakeText(this, "Login successfully done!", ToastLength.Long).Show();
-                StartActivity(typeof(MainActivity));
+                var dbFolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                var fileName = "VehicleFind.db";
+                var dbFullPath = Path.Combine(dbFolder, fileName);
+                try
+                {
+                    using (var db = new DatabaseContext(dbFullPath))
+                    {
+                        Users user = new Users()
+                        {
+                            FirstName = firstName.Text,
+                            Surname = surname.Text,
+                            CellNumber = cellNumber.Text,
+                            Email = email.Text,
+                            Password = password.Text
+                        };
+
+                        db.User.Add(user);
+                        db.SaveChanges();
+                        Toast.MakeText(this, "You have been registered!", ToastLength.Long).Show();
+                        StartActivity(typeof(LoginActivity));
+                    }
+                }
+                catch(Exception ex)
+                {
+
+                }
             }
             else
             {
-                Toast.MakeText(this, "Wrong credentials found!", ToastLength.Long).Show();
+                Toast.MakeText(this, "Passwords must match!", ToastLength.Long).Show();
             }
         }
 

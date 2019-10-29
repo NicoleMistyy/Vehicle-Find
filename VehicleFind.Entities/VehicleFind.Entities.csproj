@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="VehicleFind,MigrationBait\**" />
+    <EmbeddedResource Remove="VehicleFind,MigrationBait\**" />
+    <None Remove="VehicleFind,MigrationBait\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
