@@ -52,21 +52,9 @@
             android:layout_height="wrap_content"
             android:hint="Price"
             android:theme="@style/EditTextWhite"
-            android:inputType="textPassword"/>		
+            android:inputType="text"/>	
       </LinearLayout>
     </FrameLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/login_bottom">     
-      <android.support.design.widget.FloatingActionButton
-          android:id="@+id/btnRegister"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="top"
-          android:layout_marginStart="10dp"
-          app:backgroundTint="#003157"
-          app:srcCompat="@drawable/ic_right_arrow" />
-    </FrameLayout>
+    
   </LinearLayout>
 </RelativeLayout>

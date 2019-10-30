@@ -19,7 +19,7 @@ using VehicleFind.Services.Interfaces;
 
 namespace VehicleFind
 {
-    [Activity(Theme = "@style/MyTheme.AddModel", MainLauncher = false, NoHistory = true, Icon = "@mipmap/ic_launcher")]
+    [Activity( MainLauncher = false, NoHistory = true, Icon = "@mipmap/ic_launcher")]
     public class AddModelActivity : Activity
     {
         EditText name;
@@ -27,7 +27,6 @@ namespace VehicleFind
         EditText zeroToOneHundred;
         EditText power;
         EditText price;
-        EditText confirmPassword;
 
 
         protected override void OnCreate(Bundle savedInstanceState)
