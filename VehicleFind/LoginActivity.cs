@@ -55,10 +55,5 @@ namespace VehicleFind
             }
         }
 
-        async void OpenRegister(object sender, EventArgs args)
-        {
-            SetContentView(Resource.Layout.Register);
-        }
-
-        }
+    }
 }
