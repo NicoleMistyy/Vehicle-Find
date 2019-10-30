@@ -86,14 +86,14 @@ namespace VehicleFind
                     var model = db.Models.Where(m => m.Id == position).FirstOrDefault();
                     var specificationsList = db.Specifications.Where(s => s.ModelId == model.Id);
 
-                    TextView textView = FindViewById<TextView>(Resource.Id.brand);
-                    textView.Text += "Brand: " + model.Name + System.Environment.NewLine;
-                    textView.Text += "Range: " + model.Name + System.Environment.NewLine;
+                    //TextView textView = FindViewById<TextView>(Resource.Id.brand);
+                    //textView.Text += "Brand: " + model.Name + System.Environment.NewLine;
+                    //textView.Text += "Range: " + model.Name + System.Environment.NewLine;
 
-                    foreach (var spec in specificationsList)
-                    {
-                        textView.Text += $"{spec.Name}: {spec.Value}" + System.Environment.NewLine;
-                    }
+                    //foreach (var spec in specificationsList)
+                    //{
+                    //    textView.Text += $"{spec.Name}: {spec.Value}" + System.Environment.NewLine;
+                    //}
                 }
 
 
@@ -133,7 +133,7 @@ namespace VehicleFind
             {
                 //Configure the gps
                 var request = new GeolocationRequest(GeolocationAccuracy.Medium);
-                var location =  Geolocation.GetLocationAsync(request);
+                var location = Geolocation.GetLocationAsync(request);
                 if (location != null)
                 {
                     locationResult = location.Result.Longitude.ToString() + "," + location.Result.Latitude.ToString();

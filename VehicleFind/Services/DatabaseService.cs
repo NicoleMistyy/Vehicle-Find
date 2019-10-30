@@ -131,16 +131,7 @@ namespace VehicleFind.Services
 
                         };
 
-
-                        Specifications specifications3 = new Specifications()
-                        {
-                            Name = "Price",
-                            Value = "320 000",
-                            ModelId = modelSaved.Entity.Id
-
-                        };
-
-                        List<Specifications> specificationList = new List<Specifications>() { specifications, specifications1, specifications2, specifications3 };
+                        List<Specifications> specificationList = new List<Specifications>() { specifications, specifications1, specifications2 };
 
                         db.Specifications.AddRange(specifications);
                         await db.SaveChangesAsync();
